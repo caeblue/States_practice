@@ -7,32 +7,7 @@ public class TV {
 
     public TV()
     {
-       //wip
-    }
-
-    public void pressHomeButton()
-    {
-        state.pressHomeButton();
-    }
-
-    public void pressNetflixButton()
-    {
-        state.pressNetflixButton();
-    }
-
-    public void pressHuluButton()
-    {
-        state.pressHuluButton();
-    }
-
-    public void pressMovieButton()
-    {
-        state.pressMovieButton();
-    }
-
-    public void pressTVButton()
-    {
-        state.pressTVButton();
+      //wip
     }
 
     public State getHomeState()
@@ -64,5 +39,40 @@ public class TV {
         {
             this.state = huluState;
         }
+        else
+        {
+            this.state=state;
+        }
     }
+    public void pressHomeButton()
+    {
+        setState(state);
+        state.pressHomeButton();
+    }
+
+    public void pressNetflixButton()
+    {
+        setState(state);
+        state.pressNetflixButton();
+    }
+
+    public void pressHuluButton()
+    {
+        setState(state);
+        state.pressHuluButton();
+    }
+
+    public void pressMovieButton()
+    {
+        setState(state);
+        state.pressMovieButton();
+    }
+
+    public void pressTVButton()
+    {
+        setState(state);
+        state.pressTVButton();
+    }
+
+
 }
