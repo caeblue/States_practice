@@ -5,12 +5,21 @@ public class HuluState implements State
     private TV tv;
 
     /**
+     * Setting the tv to a local variable 
+     * @param tv
+     */
+    public HuluState(TV tv)
+    {
+        this.tv=tv;
+    }
+
+    /**
      * Displaying the home button information and changing the state
      */
     public void pressHomeButton()
     {
         System.out.println("Loading the Home Screen...");
-        tv.pressHomeButton();
+        tv.setState(tv.getHomeState());
     }
 
     /**
@@ -19,7 +28,7 @@ public class HuluState implements State
     public void pressNetflixButton()
     {
         System.out.println("Loading the Netflix app...");
-        tv.pressNetflixButton();
+        tv.setState(tv.getNetflixState());
     }
 
     /**

@@ -2,6 +2,14 @@ public class HomeState implements State
 {
     private TV tv;
 
+     /**
+     * Setting the tv to a local variable 
+     * @param tv
+     */
+   public HomeState(TV tv)
+   {
+       this.tv=tv;
+   }
     /**
      * Displaying the home screen output
      */
@@ -16,7 +24,7 @@ public class HomeState implements State
     public void pressNetflixButton()
     {
         System.out.println("Loading Netflix...");
-        tv.pressNetflixButton();
+        tv.setState(tv.getNetflixState());
     }
 
     /**
@@ -25,7 +33,7 @@ public class HomeState implements State
     public void pressHuluButton()
     {
         System.out.println("Loading Hulu...");
-        tv.pressHuluButton();
+        tv.setState(tv.getHuluState());
     }
 
     /**
