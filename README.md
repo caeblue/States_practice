@@ -1,1 +1,1 @@
-# CSCE247_state
+# Software Engineering 247
